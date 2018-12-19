@@ -1,0 +1,4 @@
+include README.rst
+include README.md
+recursive-include cresud_scanagroempresa_theme/base_static *
+recursive-include cresud_scanagroempresa_theme/templates *

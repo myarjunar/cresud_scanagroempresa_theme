@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'header/meta.html' %}
+    {% include 'header/fonts.html' %}
+    {% include 'header/basic_css.html' %}
+    {% include 'header/icons.html' %}
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/cresud.css" %}">
+
+    <title>ScanAgroEmpresa - Log in</title>
+</head>
+<body>
+    <div class="grid-container fluid st-login-header">
+        <div class="grid-x">
+            <div class="small-6 cell text-center cresud cresud-logo">
+                <img src={% static "images/ui/cresud/cresud-logo.png" %} alt="CRESUD Logo" />
+            </div>
+            <div class="small-6 cell text-center cresud brasilagro-logo">
+                <img src={% static "images/ui/cresud/brasilagro-logo.png" %} alt="Brasilagro Logo" />
+            </div>
+            <div class="small-12 cell text-center">
+                <img class="st-ae-logo" src="../static/images/ui/logo_twolines.svg" alt="ScanAgroEmpresa Logo" />
+
+            </div>
+            <div class="small-7 small-offset-3 medium-offset-5 medium-2 text-center st-login-title">
+                <h2>Ingresar</h2>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container fluid st-login-content">
+        <div class="grid-x">
+            <div class="medium-3 medium-offset-3 show-for-medium cell st-login-social">
+                <p>Iniciá sessión cons tu redes sociales</p>
+                <button type="button" class="button social facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <span>Inicio de sesión con Facebook</span>
+                </button>
+                <br />
+                <button type="button" class="button social google-plus">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>Inicio de sessión con Google</span>
+                </button>
+            </div>
+
+            <div class="small-12 medium-3 cell st-login-form">
+                {% if form.errors %}
+                    <p>Your username and password didn't match. Please try again.</p>
+                {% endif %}
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    {{ form.username }}   
+                    {{ form.password }}
+
+                    <input type="hidden" name="next" value="{{ next }}">
+                    <input type="submit" value="log in">
+
+                    <label class="st-login-rememberme">
+                        <span class="st-login-rememberme-span">Recuerdame</span>
+                        <input type="checkbox" checked="checked" />
+                        <span class="st-login-checkmark"></span>
+                    </label>
+                    <hr />
+                    <p class="st-signup">No tenes una cuenta? <a href="/signup">REGISTRATE</a></p>
+                </form>
+            </div>
+            <div class="small-12 st-login-social show-for-small-only">
+                <div class="grid-x grid-margin-x">
+                <div class="small-4 cell">
+                    <p>Ingresá con</p>
+                </div>
+                <div class="small-4 cell">
+                    <button type="button" class="button social facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <span>facebook</span>
+                    </button>                    
+                </div>
+                <div class="small-4 cell">
+                    <button type="button" class="button social google-plus">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i><span>google</span>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container fluid st-login-footer">
+        <div class="grid-x">
+            <div class="medium-4 cell text-center">
+                <p class="show-for-small-only">Powered by</p>
+                <img width="184" height="54" src="../static/images/ui/scanterra-logo.png" />
+            </div>
+            <div class="medium-4 cell show-for-medium text-center st-legal">
+                <p>
+                    Av. Belgrano 1735 12B| CP C10935AAF. Capital Federal|Argentina.
+                    <br />
+                    TE: 0810-888-4042 / Desde el exterior: +54 11 4374 0423
+                    <br />
+                    info@scanterra.com | www.scanterra.com.ar
+                </p>
+                <p>
+                    Copyright ScanTerra 2018 | Todos los derechos reservados
+                </p>
+            </div>
+            <div class="medium-4 cell show-for-medium text-center">
+                <ul class="st-social-list">
+                    <li>
+                        <button type="button" class="button social facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> 
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="button social twitter">
+                          <i class="fa fa-twitter" aria-hidden="true"></i> 
+                        </button>                    
+                    </li>
+                    <li>
+                        <button type="button" class="button social google-plus">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="button social linkedin">
+                          <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </button>                    
+                    </li>       
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

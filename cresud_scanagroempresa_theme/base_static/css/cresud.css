@@ -1,0 +1,38 @@
+/* CRESUD theme */
+
+html, body {
+  background: url('../images/splashscreens/desktop/background.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.st-login-form input[type="submit"] {
+  background-color: rgb(12, 29, 25);
+}
+
+.cresud {
+  display: block;
+}
+
+.cresud-logo {
+  width: 150px;
+  height: 70px;
+}
+
+.cresud-logo img {
+  height: 100%;
+  float: right;
+  margin-right: 10px;
+}
+
+.brasilagro-logo {
+  width: 150px;
+  height: 70px;
+}
+
+.brasilagro-logo img {
+  height: 100%;
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+}
