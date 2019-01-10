@@ -4,10 +4,31 @@ html, body {
   background: url('../images/splashscreens/desktop/background.png') no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: inset 2000px 0 0 0 rgba(107, 98, 78, 0.5);
+}
+
+.st-ae-logo {
+  margin-top: 25px;
+}
+
+.st-login-social {
+  padding-left: 120px;
+}
+
+.st-login-form {
+  padding-right: 120px;
 }
 
 .st-login-form input[type="submit"] {
   background-color: rgb(12, 29, 25);
+}
+
+.st-main-tool {
+  background-color: #febf0c;
+}
+
+st-tool, #st-zoom button {
+  background-color: #5b5547;
 }
 
 .cresud {
@@ -35,4 +56,17 @@ html, body {
   float: left;
   margin-top: 15px;
   margin-left: 10px;
+}
+
+.map-copyright {
+    bottom: -0.2rem;
+    left: 50%;
+    margin-left: -100px;
+    padding: 5px 10px 5px 10px;
+    background: rgba(140, 119, 68, 0.43);
+    display: inline-block;
+    position: absolute;
+    visibility: visible;
+    z-index: 5;
+    border-radius: 4px;
 }
