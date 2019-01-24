@@ -1,0 +1,24 @@
+body {
+  overflow: hidden;
+}
+
+.st-tool, #st-zoom button {
+  background-color: #5b5547;
+}
+
+.st-main-tool {
+  background-color: #febf0c;
+}
+
+.map-copyright {
+    bottom: -0.2rem;
+    left: 50%;
+    margin-left: -100px;
+    padding: 5px 10px 5px 10px;
+    background: rgba(140, 119, 68, 0.43);
+    display: inline-block;
+    position: absolute;
+    visibility: visible;
+    z-index: 5;
+    border-radius: 4px;
+}
