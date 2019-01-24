@@ -5,6 +5,8 @@ html, body {
   background-size: cover;
   background-position: center;
   box-shadow: inset 2000px 0 0 0 rgba(107, 98, 78, 0.5);
+  height: 100%;
+  overflow: hidden;
 }
 
 .st-ae-logo {
@@ -21,14 +23,6 @@ html, body {
 
 .st-login-form input[type="submit"] {
   background-color: rgb(12, 29, 25);
-}
-
-.st-main-tool {
-  background-color: #febf0c;
-}
-
-st-tool, #st-zoom button {
-  background-color: #5b5547;
 }
 
 .cresud {
@@ -56,17 +50,4 @@ st-tool, #st-zoom button {
   float: left;
   margin-top: 15px;
   margin-left: 10px;
-}
-
-.map-copyright {
-    bottom: -0.2rem;
-    left: 50%;
-    margin-left: -100px;
-    padding: 5px 10px 5px 10px;
-    background: rgba(140, 119, 68, 0.43);
-    display: inline-block;
-    position: absolute;
-    visibility: visible;
-    z-index: 5;
-    border-radius: 4px;
 }
