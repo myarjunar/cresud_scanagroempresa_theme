@@ -2,12 +2,16 @@ body {
   overflow: hidden;
 }
 
+.st-top-bar {
+    background-image: linear-gradient(to right, #5b5547 0%, #febf0c 100%);
+}
+
 .st-tool, #st-zoom button {
-  background-color: #5b5547;
+    background-color: #5b5547;
 }
 
 .st-main-tool {
-  background-color: #febf0c;
+    background-color: #febf0c;
 }
 
 .map-copyright {
@@ -21,4 +25,12 @@ body {
     visibility: visible;
     z-index: 5;
     border-radius: 4px;
+}
+
+.top-bar-left {
+    padding-left: 25px;
+}
+
+.top-bar-left img {
+    width: 225px;
 }
