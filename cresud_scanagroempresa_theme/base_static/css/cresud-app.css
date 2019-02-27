@@ -10,6 +10,15 @@ body {
     background-color: #5b5547;
 }
 
+.st-tool:active, #st-zoom button:active {
+    background-color: #9a7d3a;
+}
+
+.st-tool-active {
+    text-decoration: none;
+    background-color: #9a7d3a;
+}
+
 .st-main-tool {
     background-color: #febf0c;
 }
